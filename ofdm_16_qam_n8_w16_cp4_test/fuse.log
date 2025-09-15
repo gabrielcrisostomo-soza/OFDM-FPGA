@@ -1,0 +1,62 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/top_module_tb_isim_beh.exe -prj D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/top_module_tb_beh.prj work.top_module_tb work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/ipcore_dir/xfft_v8_0.v" into library work
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/spi_16.v" into library work
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/source_gen1.v" into library work
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/qam_mapper.v" into library work
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/qam_mapper.v" Line 51: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/qam_mapper.v" Line 54: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/qam_mapper.v" Line 55: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/qam_mapper.v" Line 56: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/qam_mapper.v" Line 58: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/qam_mapper.v" Line 60: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/master_clk_divisor.v" into library work
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/ifft_manager.v" into library work
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/ofdm_top_module.v" into library work
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/top_module_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+WARNING:HDLCompiler:687 - "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" Line 5: Illegal redeclaration of module <glbl>.
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/ifft_manager.v" Line 54: Port event_frame_started is not connected to this instance
+Completed static elaboration
+Compiling module master_clk_divisor
+Compiling module source_gen1
+Compiling module qam_mapper_default
+Compiling module FDE
+Compiling module SRLC16E
+Compiling module INV
+Compiling module LUT6(INIT=64'b010111111010100001...
+Compiling module FD
+Compiling module LUT4(INIT=16'b011110010101010)
+Compiling module LUT2(INIT=4'b0110)
+Compiling module LUT3(INIT=8'b11100010)
+Compiling module LUT5(INIT=32'b011101010101010100...
+Compiling module FDR
+Compiling module FDS
+Compiling module FDRE
+Compiling module SRL16E
+Compiling module MUXCY
+Compiling module XORCY
+Compiling module LUT1(INIT=2'b01)
+Compiling module DSP48A1(CARRYOUTREG=0,CREG=0,DRE...
+Compiling module DSP48A1(A0REG=1,B0REG=1,CARRYINR...
+Compiling module FDSE
+Compiling module GND
+Compiling module VCC
+Compiling module SRLC32E
+Compiling module RAMB8BWER(DATA_WIDTH_A=36,DATA_W...
+Compiling module xfft_v8_0
+Compiling module ifft_manager
+Compiling module spi_16
+Compiling module ofdm_top_module
+Compiling module top_module_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 120 Verilog Units
+Built simulation executable D:/Desktop/tcc/ofdm_16_qam_n8_w16_cp4_test/top_module_tb_isim_beh.exe
+Fuse Memory Usage: 69200 KB
+Fuse CPU Usage: 1983 ms
