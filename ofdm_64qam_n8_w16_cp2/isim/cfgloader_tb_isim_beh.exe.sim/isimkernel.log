@@ -1,0 +1,28 @@
+Command line:
+   cfgloader_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63272
+
+Tue Feb 11 14:07:41 2025
+
+
+ Elaboration Time: 0.40625 sec
+
+ Current Memory Usage: 5233.76 Meg
+
+ Total Signals          : 26885
+ Total Nets             : 10742
+ Total Signal Drivers   : 9955
+ Total Blocks           : 5475
+ Total Primitive Blocks : 4433
+ Total Processes        : 19210
+ Total Traceable Variables  : 12262
+ Total Scalar Nets and Variables : 108467
+
+ Total Simulation Time: 0.78125 sec
+
+ Current Memory Usage: 5076.48 Meg
+
+Tue Feb 11 14:08:47 2025
+

@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.49d on Wed Feb 19 03:41:15 2025
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "sw0" LOCATE = SITE "T10" LEVEL 1;
+COMP "sw1" LOCATE = SITE "T9" LEVEL 1;
+COMP "sw2" LOCATE = SITE "V9" LEVEL 1;
+COMP "sw3" LOCATE = SITE "M8" LEVEL 1;
+COMP "sw4" LOCATE = SITE "N8" LEVEL 1;
+COMP "sw5" LOCATE = SITE "U8" LEVEL 1;
+COMP "sw6" LOCATE = SITE "V8" LEVEL 1;
+COMP "sw7" LOCATE = SITE "T5" LEVEL 1;
+COMP "led0" LOCATE = SITE "U16" LEVEL 1;
+COMP "led1" LOCATE = SITE "V16" LEVEL 1;
+COMP "led2" LOCATE = SITE "U15" LEVEL 1;
+COMP "led3" LOCATE = SITE "V15" LEVEL 1;
+COMP "led4" LOCATE = SITE "M11" LEVEL 1;
+COMP "led5" LOCATE = SITE "N11" LEVEL 1;
+COMP "led6" LOCATE = SITE "R11" LEVEL 1;
+COMP "led7" LOCATE = SITE "T11" LEVEL 1;
+COMP "cs_n" LOCATE = SITE "T12" LEVEL 1;
+COMP "sclk" LOCATE = SITE "P11" LEVEL 1;
+COMP "mosi" LOCATE = SITE "V12" LEVEL 1;
+COMP "reset" LOCATE = SITE "B8" LEVEL 1;
+SCHEMATIC END;
+

@@ -1,0 +1,189 @@
+Release 14.4 ngdbuild P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ofdm_top_module.ucf -p
+xc6slx16-csg324-3 ofdm_top_module.ngc ofdm_top_module.ngd
+
+Reading NGO file "D:/Desktop/tcc/ofdm_64qam_n8_w16_cp2/ofdm_top_module.ngc" ...
+Loading design module "ipcore_dir/xfft_v8_0.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "ofdm_top_module.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000199'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000019a'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000019b'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000019c'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000019d'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000219'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000021a'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000021b'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000021c'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000021d'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000021e'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000021f'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000220'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000221'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000222'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000223'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000224'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000229'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000022a'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000022b'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000022c'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000022d'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000022e'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk0000022f'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000230'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000231'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000232'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000233'
+   has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000234'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000254' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk0000027b' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk0000028d' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000344' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000345' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000003cd' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000003ce' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000003cf' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000003d0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000003d8' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000982' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000983' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000984' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000985' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000986' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000987' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000988' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000989' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk0000099a' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk0000099b' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk0000099c' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009b8' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009b9' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009ba' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009bb' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009bc' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009bd' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009be' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009bf' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009d0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009d1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk000009d2' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000c09' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000c0a' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive 'ifft_inst/fft_core/blk00000001/blk00000daf'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000e9d' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000e9e' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000e9f' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000eb0' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000eb1' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000ec7' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000ec8' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000ec9' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000eda' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'ifft_inst/fft_core/blk00000001/blk00000edb' has unconnected output pin
+WARNING:NgdBuild:452 - logical net
+   'ifft_inst/fft_core/blk00000001/blk00000392/sig00001087' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ifft_inst/fft_core/blk00000001/blk00000392/sig00001088' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  76
+
+Total memory usage is 4426496 kilobytes
+
+Writing NGD file "ofdm_top_module.ngd" ...
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+Writing NGDBUILD log file "ofdm_top_module.bld"...

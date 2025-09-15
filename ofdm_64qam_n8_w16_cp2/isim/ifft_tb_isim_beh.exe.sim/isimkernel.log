@@ -1,0 +1,28 @@
+Command line:
+   ifft_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  62468
+
+Mon Feb 10 20:35:35 2025
+
+
+ Elaboration Time: 0.40625 sec
+
+ Current Memory Usage: 5233.78 Meg
+
+ Total Signals          : 26877
+ Total Nets             : 10725
+ Total Signal Drivers   : 9953
+ Total Blocks           : 5474
+ Total Primitive Blocks : 4433
+ Total Processes        : 19207
+ Total Traceable Variables  : 12262
+ Total Scalar Nets and Variables : 108473
+
+ Total Simulation Time: 0.75 sec
+
+ Current Memory Usage: 5233.78 Meg
+
+Mon Feb 10 20:35:39 2025
+
