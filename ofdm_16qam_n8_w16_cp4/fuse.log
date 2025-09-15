@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/tb_qam_isim_beh.exe -prj D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/tb_qam_beh.prj work.tb_qam work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" into library work
+WARNING:HDLCompiler:1818 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 145: Invalid size of integer constant literal
+WARNING:HDLCompiler:1818 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 170: Invalid size of integer constant literal
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 51: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 54: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 55: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 56: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 58: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+WARNING:HDLCompiler:693 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/qam_mapper.v" Line 60: Parameter declaration becomes local in qam_mapper with formal parameter declaration list
+Analyzing Verilog file "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/tb_qam.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/tb_qam.v" Line 61: Size mismatch in connection of port <delay_c>. Formal port size is 6-bit while actual signal size is 4-bit.
+Completed static elaboration
+Compiling module qam_mapper_default
+Compiling module tb_qam
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/tb_qam_isim_beh.exe
+Fuse Memory Usage: 29348 KB
+Fuse CPU Usage: 437 ms

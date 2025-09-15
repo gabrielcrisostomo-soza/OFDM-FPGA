@@ -1,0 +1,3 @@
+verilog isim_temp "master_clk_divisor.v"
+verilog isim_temp "tb_clks.v"
+verilog isim_temp "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"

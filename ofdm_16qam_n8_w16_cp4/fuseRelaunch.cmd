@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/tb_qam_isim_beh.exe" -prj "D:/Desktop/tcc/ofdm_16qam_n8_2n16_cp4/tb_qam_beh.prj" "work.tb_qam" "work.glbl" 
