@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="clk" Dir="IN"/>
+		<Port Id="reset" Dir="IN"/>
+		<Port Id="sw0" Dir="IN"/>
+		<Port Id="sw1" Dir="IN"/>
+		<Port Id="sw2" Dir="IN"/>
+		<Port Id="sw3" Dir="IN"/>
+		<Port Id="sw4" Dir="IN"/>
+		<Port Id="sw5" Dir="IN"/>
+		<Port Id="sw6" Dir="IN"/>
+		<Port Id="sw7" Dir="IN"/>
+		<Port Id="led0" Dir="OUT"/>
+		<Port Id="led1" Dir="OUT"/>
+		<Port Id="led2" Dir="OUT"/>
+		<Port Id="led3" Dir="OUT"/>
+		<Port Id="led4" Dir="OUT"/>
+		<Port Id="led5" Dir="OUT"/>
+		<Port Id="led6" Dir="OUT"/>
+		<Port Id="led7" Dir="OUT"/>
+		<Port Id="sclk" Dir="OUT"/>
+		<Port Id="cs_n" Dir="OUT"/>
+		<Port Id="mosi" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

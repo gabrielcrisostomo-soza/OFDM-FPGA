@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/xfft_v8_0.v"
+verilog work "spi_16.v"
+verilog work "source_gen1.v"
+verilog work "qam_mapper.v"
+verilog work "master_clk_divisor.v"
+verilog work "ifft_manager.v"
+verilog work "ofdm_top_module.v"
