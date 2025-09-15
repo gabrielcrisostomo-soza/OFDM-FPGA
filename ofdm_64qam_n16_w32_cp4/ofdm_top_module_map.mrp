@@ -1,0 +1,1467 @@
+Release 14.4 Map P.49d (nt64)
+Xilinx Mapping Report File for Design 'ofdm_top_module'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o ofdm_top_module_map.ncd ofdm_top_module.ngd
+ofdm_top_module.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Wed Feb 19 06:18:28 2025
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    5
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,728 out of  18,224   14%
+    Number used as Flip Flops:               2,721
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                7
+  Number of Slice LUTs:                      6,779 out of   9,112   74%
+    Number used as logic:                    6,296 out of   9,112   69%
+      Number using O6 output only:           4,009
+      Number using O5 output only:              90
+      Number using O5 and O6:                2,197
+      Number used as ROM:                        0
+    Number used as Memory:                     425 out of   2,176   19%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:           425
+        Number using O6 output only:           276
+        Number using O5 output only:             0
+        Number using O5 and O6:                149
+    Number used exclusively as route-thrus:     58
+      Number with same-slice register load:     19
+      Number with same-slice carry load:        39
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 2,104 out of   2,278   92%
+  Number of MUXCYs used:                     2,988 out of   4,556   65%
+  Number of LUT Flip Flop pairs used:        6,985
+    Number with an unused Flip Flop:         4,837 out of   6,985   69%
+    Number with an unused LUT:                 206 out of   6,985    2%
+    Number of fully used LUT-FF pairs:       1,942 out of   6,985   27%
+    Number of unique control sets:              90
+    Number of slice register sites lost
+      to control set restrictions:             297 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        21 out of     232    9%
+    Number of LOCed IOBs:                       21 out of      21  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            8 out of      32   25%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.11
+
+Peak Memory Usage:  4667 MB
+Total REAL time to MAP completion:  3 mins 13 secs 
+Total CPU time to MAP completion:   3 mins 10 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Pack:2238 - Function generator symbol
+   "ifft_inst/fft_core/blk00000001/blk00000198/blk0000135f" (Output Signal =
+   ifft_inst/fft_core/blk00000001/blk00000198/sig000012f0) has an invalid use of
+   the LUTNM constraint. There are no other function generator symbols with a
+   matching LUTNM constraint value
+   (LUTNM=ifft_inst/fft_core/blk00000001/blk00000198/hlutnm0000015c). The
+   constraint will be ignored.
+WARNING:Pack:2238 - Function generator symbol
+   "ifft_inst/fft_core/blk00000001/blk00000198/blk00001390" (Output Signal =
+   ifft_inst/fft_core/blk00000001/blk00000198/sig0000130f) has an invalid use of
+   the LUTNM constraint. There are no other function generator symbols with a
+   matching LUTNM constraint value
+   (LUTNM=ifft_inst/fft_core/blk00000001/blk00000198/hlutnm0000016d). The
+   constraint will be ignored.
+WARNING:Pack:2238 - Function generator symbol
+   "ifft_inst/fft_core/blk00000001/blk00000198/blk0000136e" (Output Signal =
+   ifft_inst/fft_core/blk00000001/blk00000198/sig000012ff) has an invalid use of
+   the LUTNM constraint. There are no other function generator symbols with a
+   matching LUTNM constraint value
+   (LUTNM=ifft_inst/fft_core/blk00000001/blk00000198/hlutnm00000164). The
+   constraint will be ignored.
+WARNING:Pack:2238 - Function generator symbol
+   "ifft_inst/fft_core/blk00000001/blk00000198/blk00001381" (Output Signal =
+   ifft_inst/fft_core/blk00000001/blk00000198/sig00001300) has an invalid use of
+   the LUTNM constraint. There are no other function generator symbols with a
+   matching LUTNM constraint value
+   (LUTNM=ifft_inst/fft_core/blk00000001/blk00000198/hlutnm00000165). The
+   constraint will be ignored.
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network ifft_inst/fft_core/m_axis_data_tdata<15> has no
+   load.
+INFO:LIT:395 - The above info message is repeated 32 more times for the
+   following (max. 5 shown):
+   ifft_inst/fft_core/m_axis_data_tdata<14>,
+   ifft_inst/fft_core/m_axis_data_tdata<13>,
+   ifft_inst/fft_core/m_axis_data_tdata<12>,
+   ifft_inst/fft_core/m_axis_data_tdata<11>,
+   ifft_inst/fft_core/m_axis_data_tdata<10>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 278 block(s) removed
+ 107 block(s) optimized away
+ 223 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001af" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b0" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b1" (FF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004d9" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001ac" (FF)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004d4" is loadless
+and has been removed.
+    Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001a7" (FF)
+removed.
+     The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004cf" is loadless
+and has been removed.
+      Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001a2" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b2" (FF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004da" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001ad" (FF)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004d5" is loadless
+and has been removed.
+    Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001a8" (FF)
+removed.
+     The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004d0" is loadless
+and has been removed.
+      Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001a3" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b3" (FF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004db" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001ae" (FF)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004d6" is loadless
+and has been removed.
+    Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001a9" (FF)
+removed.
+     The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004d1" is loadless
+and has been removed.
+      Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001a4" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000250" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000251" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000252" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000253" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000254" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000255" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000256" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000257" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000258" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000259" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000025a" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000260" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000261" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000262" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000263" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000264" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000265" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000266" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000267" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000268" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000269" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000026a" (FF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000291" (SFF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000002a4" (SFF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000002bb" (SFF)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000002e1" (SFF)
+removed.
+Loadless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk00000372" (XOR)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/sig0000144c"
+is loadless and has been removed.
+  Loadless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk00000377" (MUX)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/sig0000144d"
+is loadless and has been removed.
+    Loadless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk00000378" (MUX)
+removed.
+     The signal "ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/sig0000144e"
+is loadless and has been removed.
+      Loadless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk00000379" (MUX)
+removed.
+Loadless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk00000373" (XOR)
+removed.
+Loadless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk00000374" (XOR)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000896" (MUX)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000008cd" (MUX)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a71" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b3c" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a56" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000a9f" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a72" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b3d" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a57" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000aa0" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a73" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b3e" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a58" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000aa1" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a74" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b3f" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a59" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000aa2" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a75" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b40" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a5a" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000aa3" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a76" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b41" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a5b" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a77" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b42" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a5c" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a78" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b43" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a5d" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a89" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b54" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a6e" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a8a" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b55" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a6f" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a8b" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b56" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a70" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aa7" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b57" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a8c" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000626" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aa8" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b58" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a8d" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000627" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aa9" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b59" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a8e" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000628" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aaa" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b5a" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a8f" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000629" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aab" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b5b" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a90" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000062a" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aac" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b5c" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a91" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aad" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b5d" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a92" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aae" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b5e" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000a93" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000abf" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b6f" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aa4" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ac0" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b70" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aa5" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ac1" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b71" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000aa6" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ac2" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b72" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000add" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ac3" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b73" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ade" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ac4" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b74" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000adf" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ad5" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b85" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af0" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c83" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ad6" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b86" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af1" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c82" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ad7" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b87" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af2" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c81" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ad8" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b88" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af3" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c80" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ad9" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b89" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af4" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c7f" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000ada" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b8a" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af5" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000adb" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b8b" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af6" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000adc" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b8c" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af7" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af8" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b8d" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b13" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000af9" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b8e" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b14" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000afa" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000b8f" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b15" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b0b" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba0" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b26" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c40" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b0c" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba1" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b27" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c41" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b0d" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba2" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b28" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c42" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b0e" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba3" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b29" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c43" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b0f" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba4" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b2a" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c44" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b10" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba5" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b2b" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b11" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba6" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b2c" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b12" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000ba7" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b2d" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b93" (FF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c73" is loadless
+and has been removed.
+  Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b60" (ROM)
+removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004bb" is loadless
+and has been removed.
+    Loadless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000040e/blk0000040f/blk00000417"
+(FF) removed.
+     The signal
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000040e/blk0000040f/sig000014c3"
+is loadless and has been removed.
+   The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004bf" is loadless
+and has been removed.
+    Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000003b6" (SFF)
+removed.
+     The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000061d" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000c19" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000d5a" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000c1a" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000d5b" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000c1b" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000d5c" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000f17" (MUX)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000f4e" (MUX)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000132d" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000012e4" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001340" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000012e8" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000134d" (SFF)
+removed.
+ The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000012ef" is loadless
+and has been removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000135e" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000136f" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001380" (ROM)
+removed.
+Loadless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001391" (ROM)
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<15>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<14>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<13>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<12>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<11>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<10>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<9>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<8>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<7>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<6>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<5>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<4>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<3>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<2>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<1>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tdata<0>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/event_status_channel_halt" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000003" (SFF) removed.
+  The signal "ifft_inst/fft_core/event_tlast_unexpected" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000001c" (SFF) removed.
+  The signal "ifft_inst/fft_core/event_data_in_channel_halt" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000001d" (SFF) removed.
+  The signal "ifft_inst/fft_core/event_tlast_missing" is sourceless and has been
+removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000001e" (SFF) removed.
+  The signal "ifft_inst/fft_core/event_frame_started" is sourceless and has been
+removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000008d" (SFF) removed.
+  The signal "ifft_inst/fft_core/blk00000001/sig00000105" is sourceless and has
+been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk000015db" (ROM) removed.
+    The signal "ifft_inst/fft_core/blk00000001/sig000000e2" is sourceless and has
+been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk0000161e" (ROM) removed.
+    The signal "ifft_inst/fft_core/blk00000001/sig000000ce" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk000000ae" (SFF) removed.
+  The signal "ifft_inst/fft_core/blk00000001/sig00000140" is sourceless and has
+been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk000015ec" (ROM) removed.
+    The signal "ifft_inst/fft_core/blk00000001/sig0000011d" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/m_axis_data_tuser<4>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tuser<3>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tuser<2>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tuser<1>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tuser<0>" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/m_axis_data_tlast" is sourceless and has been
+removed.
+The signal "ifft_inst/fft_core/event_data_out_channel_halt" is sourceless and
+has been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000e5" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig0000011a" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig00000086" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000286" (FF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000584" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000027f" (FF)
+removed.
+    The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004f6" is
+sourceless and has been removed.
+     Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000014b2" (ROM)
+removed.
+      The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000006c8" is
+sourceless and has been removed.
+       Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000003be" (FF)
+removed.
+        The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000069b" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig00000163" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig00000187" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig0000009f" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001595" (ROM)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000137a" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001444" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a0" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001594" (ROM)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001379" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001443" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a1" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001593" (ROM)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001378" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001442" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a2" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001592" (ROM)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001377" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001441" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a3" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001591" (ROM)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001376" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001440" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a4" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a5" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a6" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a7" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a8" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000a9" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000aa" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000ab" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000ac" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000ad" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000ae" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000af" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000b0" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000b1" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000b2" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000000b3" is sourceless and has
+been removed.
+The signal "ifft_inst/fft_core/blk00000001/sig000001b0" is sourceless and has
+been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00001617" (FF) removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000032/sig000001eb" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000032/blk00000045" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk000000d2/sig0000027c" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk000000d2/blk000000d5" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig0000031c" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000165" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig0000031b" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000166" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000319" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000168" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000318" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000169" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig0000031a" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000167" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000307" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000017a" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000306" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000017b" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000305" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000017c" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000304" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000017d" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000303" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000017e" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000301" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000180" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000300" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000181" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig00000302" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000017f" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002fe" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000183" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002fd" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000184" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002ff" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000182" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002fb" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000186" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002fa" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000187" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002fc" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000185" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002f9" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000188" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002f8" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000189" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002f7" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000018a" (FF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk0000012f/sig000002e6" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003fd" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b4" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003fc" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b5" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003fb" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b6" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003fa" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b7" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f9" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b8" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f8" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001b9" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f7" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001ba" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f6" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001bb" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f5" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001bc" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f4" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001bd" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f3" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001be" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f2" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001bf" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f1" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001c0" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003f0" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001c1" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003ef" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001c2" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000003ee" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk000001c3" (SFF)
+removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig000004ba" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b5d" (ROM)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000c70" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b8f" (FF)
+removed.
+    The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000d17" is
+sourceless and has been removed.
+     Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000b8b" (FF)
+removed.
+      The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00000d13" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000048e" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000133c" (FF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001166" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001371" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001436" (SFF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000137b" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001372" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001437" (SFF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000137c" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001373" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001438" (SFF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000137d" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001374" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001439" (SFF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000137e" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001375" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000143a" (SFF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig0000137f" is
+sourceless and has been removed.
+The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001387" is
+sourceless and has been removed.
+ Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000144b" (SFF)
+removed.
+  The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001389" is
+sourceless and has been removed.
+   Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk00001598" (ROM)
+removed.
+    The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001388" is
+sourceless and has been removed.
+     Sourceless block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000144d" (SFF)
+removed.
+      The signal "ifft_inst/fft_core/blk00000001/blk00000198/sig00001386" is
+sourceless and has been removed.
+The signal
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000040e/blk0000040f/sig000014c2"
+is sourceless and has been removed.
+The signal
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000044d/blk0000044e/sig00001545"
+is sourceless and has been removed.
+The signal
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000044d/blk0000044e/sig00001546"
+is sourceless and has been removed.
+ Sourceless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000044d/blk0000044e/blk0000045c"
+(FF) removed.
+The signal
+"ifft_inst/fft_core/blk00000001/blk00000198/blk00000c00/blk00000c01/sig00001be2"
+is sourceless and has been removed.
+ Sourceless block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk00000c00/blk00000c01/blk00000c07"
+(FF) removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "qam_mod/m_dlast" is unused and has been removed.
+ Unused block "qam_mod/m_dlast" (FF) removed.
+  The signal "qam_mod/GND_5_o_m_dlast_MUX_1978_o" is unused and has been removed.
+   Unused block "qam_mod/Mmux_GND_5_o_m_dlast_MUX_1978_o11" (ROM) removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000021" (FF) removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000032/blk0000005b" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk000000d1" (FF) removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk000000d2/blk000000fc" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000131" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000132" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000013c" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000013d" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000013e" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000014e" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000150" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000151" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000152" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000153" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000154" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000155" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000156" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000157" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000158" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk00000159" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000015a" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000015b" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000015c" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000015d" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000015e" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk0000012f/blk0000015f" (SRLC16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk000003b1" (SRL16E)
+removed.
+Unused block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000040e/blk0000040f/blk00000415"
+(SRLC32E) removed.
+Unused block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000040e/blk0000040f/blk00000416"
+(SRLC32E) removed.
+Unused block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000044d/blk0000044e/blk0000045a"
+(SRLC32E) removed.
+Unused block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk0000044d/blk0000044e/blk0000045b"
+(SRLC32E) removed.
+Unused block
+"ifft_inst/fft_core/blk00000001/blk00000198/blk00000c00/blk00000c01/blk00000c06"
+(SRLC32E) removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000c16" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000c17" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk00000c18" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000132c" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000133e" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000134c" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000143b" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000143c" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000143d" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000143e" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000143f" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00000198/blk0000144c" (SRL16E)
+removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk000015ea" (ROM) removed.
+Unused block "ifft_inst/fft_core/blk00000001/blk00001630" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		ifft_inst/fft_core/blk00000001/blk00000002
+FD 		ifft_inst/fft_core/blk00000001/blk00000024
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk00000026
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk00000027
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk00000028
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk00000029
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk0000002b
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk0000002c
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk0000002d
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk0000002e
+   optimized to 0
+FD 		ifft_inst/fft_core/blk00000001/blk00000030
+   optimized to 0
+LUT2 		ifft_inst/fft_core/blk00000001/blk0000012f/blk0000018b
+   optimized to 1
+LUT3 		ifft_inst/fft_core/blk00000001/blk0000012f/blk00000195
+   optimized to 1
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000199
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000019a
+FDE 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000024c
+   optimized to 0
+FDE 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000025b
+   optimized to 0
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000297/blk00000298
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000297/blk00000299
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002ab/blk000002ac
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002ab/blk000002ad
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002c3/blk000002c4
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002c3/blk000002c5
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002da/blk000002db
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002da/blk000002dc
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002e6/blk000002e7
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk000002e6/blk000002e8
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000368/blk00000369/blk0000036a
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000368/blk00000369/blk0000036b
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk0000036f
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000036e/blk00000370
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000040e/blk0000040f/blk00000410
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000040e/blk0000040f/blk00000411
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000041b/blk0000041c/blk0000041d
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000041b/blk0000041c/blk0000041e
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000042f/blk00000430/blk00000431
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000042f/blk00000430/blk00000432
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000436/blk00000437/blk00000438
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000436/blk00000437/blk00000439
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000043c/blk0000043d/blk0000043e
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000043c/blk0000043d/blk0000043f
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000443/blk00000444/blk00000445
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000443/blk00000444/blk00000446
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000044d/blk0000044e/blk0000044f
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000044d/blk0000044e/blk00000450
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000045d/blk0000045e/blk0000045f
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000045d/blk0000045e/blk00000460
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000004aa/blk000004ab/blk000004ac
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000004cd/blk000004ce/blk000004cf
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000004f0/blk000004f1/blk000004f2
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000004f5/blk000004f6/blk000004f7
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000051a/blk0000051b/blk0000051c
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000060c/blk0000060d
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000651/blk00000652
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000006bf/blk000006c0/blk000006c1
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000006c4/blk000006c5/blk000006c6
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000006eb/blk000006ec/blk000006ed
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000712/blk00000713/blk00000714
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000739/blk0000073a/blk0000073b
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000880/blk00000881/blk00000882
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000885/blk00000886/blk00000887
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000088a/blk0000088b/blk0000088c
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000088f/blk00000890/blk00000891
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000902/blk00000903
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000094b/blk0000094c
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000994/blk00000995/blk00000996
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000994/blk00000995/blk00000997
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000009ac/blk000009ad/blk000009ae
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000009ac/blk000009ad/blk000009af
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk000009b7/blk000009b8
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000009d5/blk000009d6/blk000009d7
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk000009da/blk000009db
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000be5/blk00000be6/blk00000be7
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000be5/blk00000be6/blk00000be8
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000bec/blk00000bed/blk00000bee
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000bec/blk00000bed/blk00000bef
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000bf2/blk00000bf3/blk00000bf4
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000bf2/blk00000bf3/blk00000bf5
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000bf8/blk00000bf9/blk00000bfa
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000bf8/blk00000bf9/blk00000bfb
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000c00/blk00000c01/blk00000c02
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000c00/blk00000c01/blk00000c03
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000c08/blk00000c09/blk00000c0a
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000c08/blk00000c09/blk00000c0b
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000c22/blk00000c23
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000c67/blk00000c68
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000d34/blk00000d35/blk00000d36
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000d57/blk00000d58/blk00000d59
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000d7a/blk00000d7b/blk00000d7c
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000d7f/blk00000d80/blk00000d81
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000da4/blk00000da5/blk00000da6
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000e51/blk00000e52
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk00000e9a/blk00000e9b
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000f51/blk00000f52/blk00000f53
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00000f56/blk00000f57/blk00000f58
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000111e/blk0000111f/blk00001120
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk0000111e/blk0000111f/blk00001121
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk00001124/blk00001125/blk00001126
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000112c/blk0000112d
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk0000113e/blk0000113f
+VCC 		ifft_inst/fft_core/blk00000001/blk00000198/blk00001150/blk00001151
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk00001195/blk00001196
+GND
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000013ca/blk000013cb/blk000013cc
+VCC
+		ifft_inst/fft_core/blk00000001/blk00000198/blk000013ca/blk000013cb/blk000013cd
+GND 		ifft_inst/fft_core/blk00000001/blk00000198/blk00001433/blk00001434
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| cs_n                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led0                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led1                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led2                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led3                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led4                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led5                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led6                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led7                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| mosi                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| reset                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sclk                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sw0                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw1                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw2                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw3                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw4                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw5                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw6                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw7                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,2227 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: ofdm_top_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ofdm_top_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ofdm_top_module"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ofdm_top_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ipcore_dir\xfft_v8_0.v" into library work
+Parsing module <xfft_v8_0>.
+Analyzing Verilog file "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\spi_16.v" into library work
+Parsing module <spi_16>.
+Analyzing Verilog file "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\source_gen1.v" into library work
+Parsing module <source_gen1>.
+Analyzing Verilog file "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" into library work
+Parsing module <qam_mapper>.
+INFO:HDLCompiler:693 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 51. parameter declaration becomes local in qam_mapper with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 54. parameter declaration becomes local in qam_mapper with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 55. parameter declaration becomes local in qam_mapper with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 56. parameter declaration becomes local in qam_mapper with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 58. parameter declaration becomes local in qam_mapper with formal parameter declaration list
+INFO:HDLCompiler:693 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 60. parameter declaration becomes local in qam_mapper with formal parameter declaration list
+Analyzing Verilog file "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\master_clk_divisor.v" into library work
+Parsing module <master_clk_divisor>.
+Analyzing Verilog file "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" into library work
+Parsing module <ifft_manager>.
+Analyzing Verilog file "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" into library work
+Parsing module <ofdm_top_module>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ofdm_top_module>.
+
+Elaborating module <master_clk_divisor>.
+
+Elaborating module <source_gen1>.
+
+Elaborating module <qam_mapper(B=8)>.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 196: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 200: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 206: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 207: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 208: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 214: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 215: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 220: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 221: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 231: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 232: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 257: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 170: Assignment to load_check ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v" Line 336: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:189 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" Line 154: Size mismatch in connection of port <m_symbol_index>. Formal port size is 10-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" Line 154: Assignment to qam_index ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" Line 52: Port event_frame_started is not connected to this instance
+
+Elaborating module <ifft_manager>.
+
+Elaborating module <xfft_v8_0>.
+WARNING:HDLCompiler:1127 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" Line 167: Assignment to ofdm_rawdata ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" Line 168: Assignment to ofdm_index ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" Line 170: Assignment to ofdm_last ignored, since the identifier is never used
+
+Elaborating module <spi_16>.
+WARNING:HDLCompiler:413 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\spi_16.v" Line 68: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ofdm_top_module>.
+    Related source file is "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v".
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" line 146: Output port <m_symbol_index> of the instance <qam_mod> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" line 160: Output port <m_axis_data_tdata> of the instance <ifft_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" line 160: Output port <m_axis_data_tuser> of the instance <ifft_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.v" line 160: Output port <m_axis_data_tlast> of the instance <ifft_inst> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ofdm_top_module> synthesized.
+
+Synthesizing Unit <master_clk_divisor>.
+    Related source file is "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\master_clk_divisor.v".
+        a_div = 36
+    Found 32-bit register for signal <acounter>.
+    Found 1-bit register for signal <aclk>.
+    Found 1-bit register for signal <spi_sclk>.
+    Found 32-bit adder for signal <acounter[31]_GND_2_o_add_1_OUT> created at line 48.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <master_clk_divisor> synthesized.
+
+Synthesizing Unit <source_gen1>.
+    Related source file is "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\source_gen1.v".
+    Found 32-bit register for signal <lfsr32>.
+    Found 8-bit register for signal <data>.
+    Found 16-bit register for signal <lfsr16>.
+    Found 1-bit register for signal <valid>.
+    Summary:
+	inferred  57 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <source_gen1> synthesized.
+
+Synthesizing Unit <qam_mapper>.
+    Related source file is "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\qam_mapper.v".
+        B = 8
+WARNING:Xst:647 - Input <m_dready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'qam_real', unconnected in block 'qam_mapper', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'qam_imag', unconnected in block 'qam_mapper', is tied to its initial value.
+    Found 64x16-bit single-port Read Only RAM <Mram_qam_real> for signal <qam_real>.
+    Found 64x16-bit single-port Read Only RAM <Mram_qam_imag> for signal <qam_imag>.
+WARNING:Xst:3012 - Available block RAM resources offer a maximum of two write ports. You are apparently describing a RAM with 20 separate write ports for signal <qam_symbol>. The RAM will be expanded on registers.
+    Found 1-bit register for signal <s_dready>.
+    Found 6-bit register for signal <delay_c>.
+    Found 6-bit register for signal <co_count>.
+    Found 16-bit register for signal <carry_over>.
+    Found 32-bit register for signal <m_data_out>.
+    Found 10-bit register for signal <m_symbol_index>.
+    Found 9-bit register for signal <load_count>.
+    Found 1-bit register for signal <fft_valid>.
+    Found 1-bit register for signal <m_dlast>.
+    Found 1-bit register for signal <m_dvalid>.
+    Found 1-bit register for signal <qam_symbol_ff_0>.
+    Found 1-bit register for signal <qam_symbol_ff_1>.
+    Found 1-bit register for signal <qam_symbol_ff_2>.
+    Found 1-bit register for signal <qam_symbol_ff_3>.
+    Found 1-bit register for signal <qam_symbol_ff_4>.
+    Found 1-bit register for signal <qam_symbol_ff_5>.
+    Found 1-bit register for signal <qam_symbol_ff_6>.
+    Found 1-bit register for signal <qam_symbol_ff_7>.
+    Found 1-bit register for signal <qam_symbol_ff_8>.
+    Found 1-bit register for signal <qam_symbol_ff_9>.
+    Found 1-bit register for signal <qam_symbol_ff_10>.
+    Found 1-bit register for signal <qam_symbol_ff_11>.
+    Found 1-bit register for signal <qam_symbol_ff_12>.
+    Found 1-bit register for signal <qam_symbol_ff_13>.
+    Found 1-bit register for signal <qam_symbol_ff_14>.
+    Found 1-bit register for signal <qam_symbol_ff_15>.
+    Found 1-bit register for signal <qam_symbol_ff_16>.
+    Found 1-bit register for signal <qam_symbol_ff_17>.
+    Found 1-bit register for signal <qam_symbol_ff_18>.
+    Found 1-bit register for signal <qam_symbol_ff_19>.
+    Found 1-bit register for signal <qam_symbol_ff_20>.
+    Found 1-bit register for signal <qam_symbol_ff_21>.
+    Found 1-bit register for signal <qam_symbol_ff_22>.
+    Found 1-bit register for signal <qam_symbol_ff_23>.
+    Found 1-bit register for signal <qam_symbol_ff_24>.
+    Found 1-bit register for signal <qam_symbol_ff_25>.
+    Found 1-bit register for signal <qam_symbol_ff_26>.
+    Found 1-bit register for signal <qam_symbol_ff_27>.
+    Found 1-bit register for signal <qam_symbol_ff_28>.
+    Found 1-bit register for signal <qam_symbol_ff_29>.
+    Found 1-bit register for signal <qam_symbol_ff_30>.
+    Found 1-bit register for signal <qam_symbol_ff_31>.
+    Found 1-bit register for signal <qam_symbol_ff_32>.
+    Found 1-bit register for signal <qam_symbol_ff_33>.
+    Found 1-bit register for signal <qam_symbol_ff_34>.
+    Found 1-bit register for signal <qam_symbol_ff_35>.
+    Found 1-bit register for signal <qam_symbol_ff_36>.
+    Found 1-bit register for signal <qam_symbol_ff_37>.
+    Found 1-bit register for signal <qam_symbol_ff_38>.
+    Found 1-bit register for signal <qam_symbol_ff_39>.
+    Found 1-bit register for signal <qam_symbol_ff_40>.
+    Found 1-bit register for signal <qam_symbol_ff_41>.
+    Found 1-bit register for signal <qam_symbol_ff_42>.
+    Found 1-bit register for signal <qam_symbol_ff_43>.
+    Found 1-bit register for signal <qam_symbol_ff_44>.
+    Found 1-bit register for signal <qam_symbol_ff_45>.
+    Found 1-bit register for signal <qam_symbol_ff_46>.
+    Found 1-bit register for signal <qam_symbol_ff_47>.
+    Found 1-bit register for signal <qam_symbol_ff_48>.
+    Found 1-bit register for signal <qam_symbol_ff_49>.
+    Found 1-bit register for signal <qam_symbol_ff_50>.
+    Found 1-bit register for signal <qam_symbol_ff_51>.
+    Found 1-bit register for signal <qam_symbol_ff_52>.
+    Found 1-bit register for signal <qam_symbol_ff_53>.
+    Found 1-bit register for signal <qam_symbol_ff_54>.
+    Found 1-bit register for signal <qam_symbol_ff_55>.
+    Found 1-bit register for signal <qam_symbol_ff_56>.
+    Found 1-bit register for signal <qam_symbol_ff_57>.
+    Found 1-bit register for signal <qam_symbol_ff_58>.
+    Found 1-bit register for signal <qam_symbol_ff_59>.
+    Found 1-bit register for signal <qam_symbol_ff_60>.
+    Found 1-bit register for signal <qam_symbol_ff_61>.
+    Found 1-bit register for signal <qam_symbol_ff_62>.
+    Found 1-bit register for signal <qam_symbol_ff_63>.
+    Found 1-bit register for signal <qam_symbol_ff_64>.
+    Found 1-bit register for signal <qam_symbol_ff_65>.
+    Found 1-bit register for signal <qam_symbol_ff_66>.
+    Found 1-bit register for signal <qam_symbol_ff_67>.
+    Found 1-bit register for signal <qam_symbol_ff_68>.
+    Found 1-bit register for signal <qam_symbol_ff_69>.
+    Found 1-bit register for signal <qam_symbol_ff_70>.
+    Found 1-bit register for signal <qam_symbol_ff_71>.
+    Found 1-bit register for signal <qam_symbol_ff_72>.
+    Found 1-bit register for signal <qam_symbol_ff_73>.
+    Found 1-bit register for signal <qam_symbol_ff_74>.
+    Found 1-bit register for signal <qam_symbol_ff_75>.
+    Found 1-bit register for signal <qam_symbol_ff_76>.
+    Found 1-bit register for signal <qam_symbol_ff_77>.
+    Found 1-bit register for signal <qam_symbol_ff_78>.
+    Found 1-bit register for signal <qam_symbol_ff_79>.
+    Found 1-bit register for signal <qam_symbol_ff_80>.
+    Found 1-bit register for signal <qam_symbol_ff_81>.
+    Found 1-bit register for signal <qam_symbol_ff_82>.
+    Found 1-bit register for signal <qam_symbol_ff_83>.
+    Found 1-bit register for signal <qam_symbol_ff_84>.
+    Found 1-bit register for signal <qam_symbol_ff_85>.
+    Found 1-bit register for signal <qam_symbol_ff_86>.
+    Found 1-bit register for signal <qam_symbol_ff_87>.
+    Found 1-bit register for signal <qam_symbol_ff_88>.
+    Found 1-bit register for signal <qam_symbol_ff_89>.
+    Found 1-bit register for signal <qam_symbol_ff_90>.
+    Found 1-bit register for signal <qam_symbol_ff_91>.
+    Found 1-bit register for signal <qam_symbol_ff_92>.
+    Found 1-bit register for signal <qam_symbol_ff_93>.
+    Found 1-bit register for signal <qam_symbol_ff_94>.
+    Found 1-bit register for signal <qam_symbol_ff_95>.
+    Found 1-bit register for signal <qam_symbol_ff_96>.
+    Found 1-bit register for signal <qam_symbol_ff_97>.
+    Found 1-bit register for signal <qam_symbol_ff_98>.
+    Found 1-bit register for signal <qam_symbol_ff_99>.
+    Found 1-bit register for signal <qam_symbol_ff_100>.
+    Found 1-bit register for signal <qam_symbol_ff_101>.
+    Found 1-bit register for signal <qam_symbol_ff_102>.
+    Found 1-bit register for signal <qam_symbol_ff_103>.
+    Found 1-bit register for signal <qam_symbol_ff_104>.
+    Found 1-bit register for signal <qam_symbol_ff_105>.
+    Found 1-bit register for signal <qam_symbol_ff_106>.
+    Found 1-bit register for signal <qam_symbol_ff_107>.
+    Found 1-bit register for signal <qam_symbol_ff_108>.
+    Found 1-bit register for signal <qam_symbol_ff_109>.
+    Found 1-bit register for signal <qam_symbol_ff_110>.
+    Found 1-bit register for signal <qam_symbol_ff_111>.
+    Found 1-bit register for signal <qam_symbol_ff_112>.
+    Found 1-bit register for signal <qam_symbol_ff_113>.
+    Found 1-bit register for signal <qam_symbol_ff_114>.
+    Found 1-bit register for signal <qam_symbol_ff_115>.
+    Found 1-bit register for signal <qam_symbol_ff_116>.
+    Found 1-bit register for signal <qam_symbol_ff_117>.
+    Found 1-bit register for signal <qam_symbol_ff_118>.
+    Found 1-bit register for signal <qam_symbol_ff_119>.
+    Found 1-bit register for signal <qam_symbol_ff_120>.
+    Found 1-bit register for signal <qam_symbol_ff_121>.
+    Found 1-bit register for signal <qam_symbol_ff_122>.
+    Found 1-bit register for signal <qam_symbol_ff_123>.
+    Found 1-bit register for signal <qam_symbol_ff_124>.
+    Found 1-bit register for signal <qam_symbol_ff_125>.
+    Found 1-bit register for signal <qam_symbol_ff_126>.
+    Found 1-bit register for signal <qam_symbol_ff_127>.
+    Found 1-bit register for signal <qam_symbol_ff_128>.
+    Found 1-bit register for signal <qam_symbol_ff_129>.
+    Found 1-bit register for signal <qam_symbol_ff_130>.
+    Found 1-bit register for signal <qam_symbol_ff_131>.
+    Found 1-bit register for signal <qam_symbol_ff_132>.
+    Found 1-bit register for signal <qam_symbol_ff_133>.
+    Found 1-bit register for signal <qam_symbol_ff_134>.
+    Found 1-bit register for signal <qam_symbol_ff_135>.
+    Found 1-bit register for signal <qam_symbol_ff_136>.
+    Found 1-bit register for signal <qam_symbol_ff_137>.
+    Found 1-bit register for signal <qam_symbol_ff_138>.
+    Found 1-bit register for signal <qam_symbol_ff_139>.
+    Found 1-bit register for signal <qam_symbol_ff_140>.
+    Found 1-bit register for signal <qam_symbol_ff_141>.
+    Found 1-bit register for signal <qam_symbol_ff_142>.
+    Found 1-bit register for signal <qam_symbol_ff_143>.
+    Found 1-bit register for signal <qam_symbol_ff_144>.
+    Found 1-bit register for signal <qam_symbol_ff_145>.
+    Found 1-bit register for signal <qam_symbol_ff_146>.
+    Found 1-bit register for signal <qam_symbol_ff_147>.
+    Found 1-bit register for signal <qam_symbol_ff_148>.
+    Found 1-bit register for signal <qam_symbol_ff_149>.
+    Found 1-bit register for signal <qam_symbol_ff_150>.
+    Found 1-bit register for signal <qam_symbol_ff_151>.
+    Found 1-bit register for signal <qam_symbol_ff_152>.
+    Found 1-bit register for signal <qam_symbol_ff_153>.
+    Found 1-bit register for signal <qam_symbol_ff_154>.
+    Found 1-bit register for signal <qam_symbol_ff_155>.
+    Found 1-bit register for signal <qam_symbol_ff_156>.
+    Found 1-bit register for signal <qam_symbol_ff_157>.
+    Found 1-bit register for signal <qam_symbol_ff_158>.
+    Found 1-bit register for signal <qam_symbol_ff_159>.
+    Found 1-bit register for signal <qam_symbol_ff_160>.
+    Found 1-bit register for signal <qam_symbol_ff_161>.
+    Found 1-bit register for signal <qam_symbol_ff_162>.
+    Found 1-bit register for signal <qam_symbol_ff_163>.
+    Found 1-bit register for signal <qam_symbol_ff_164>.
+    Found 1-bit register for signal <qam_symbol_ff_165>.
+    Found 1-bit register for signal <qam_symbol_ff_166>.
+    Found 1-bit register for signal <qam_symbol_ff_167>.
+    Found 1-bit register for signal <qam_symbol_ff_168>.
+    Found 1-bit register for signal <qam_symbol_ff_169>.
+    Found 1-bit register for signal <qam_symbol_ff_170>.
+    Found 1-bit register for signal <qam_symbol_ff_171>.
+    Found 1-bit register for signal <qam_symbol_ff_172>.
+    Found 1-bit register for signal <qam_symbol_ff_173>.
+    Found 1-bit register for signal <qam_symbol_ff_174>.
+    Found 1-bit register for signal <qam_symbol_ff_175>.
+    Found 1-bit register for signal <qam_symbol_ff_176>.
+    Found 1-bit register for signal <qam_symbol_ff_177>.
+    Found 1-bit register for signal <qam_symbol_ff_178>.
+    Found 1-bit register for signal <qam_symbol_ff_179>.
+    Found 1-bit register for signal <qam_symbol_ff_180>.
+    Found 1-bit register for signal <qam_symbol_ff_181>.
+    Found 1-bit register for signal <qam_symbol_ff_182>.
+    Found 1-bit register for signal <qam_symbol_ff_183>.
+    Found 1-bit register for signal <qam_symbol_ff_184>.
+    Found 1-bit register for signal <qam_symbol_ff_185>.
+    Found 1-bit register for signal <qam_symbol_ff_186>.
+    Found 1-bit register for signal <qam_symbol_ff_187>.
+    Found 1-bit register for signal <qam_symbol_ff_188>.
+    Found 1-bit register for signal <qam_symbol_ff_189>.
+    Found 1-bit register for signal <qam_symbol_ff_190>.
+    Found 1-bit register for signal <qam_symbol_ff_191>.
+    Found 8-bit subtractor for signal <GND_5_o_GND_5_o_sub_4_OUT> created at line 194.
+    Found 7-bit subtractor for signal <GND_5_o_GND_5_o_sub_6_OUT> created at line 196.
+    Found 8-bit subtractor for signal <GND_5_o_GND_5_o_sub_16_OUT> created at line 200.
+    Found 11-bit subtractor for signal <n0253[10:0]> created at line 231.
+    Found 32-bit subtractor for signal <GND_5_o_GND_5_o_sub_128_OUT> created at line 232.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_187_OUT> created at line 309.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_195_OUT> created at line 314.
+    Found 32-bit subtractor for signal <GND_5_o_GND_5_o_sub_208_OUT> created at line 319.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_220_OUT> created at line 324.
+    Found 32-bit subtractor for signal <GND_5_o_GND_5_o_sub_221_OUT> created at line 324.
+    Found 7-bit adder for signal <n0321> created at line 194.
+    Found 7-bit adder for signal <n0329> created at line 196.
+    Found 10-bit adder for signal <n0375> created at line 200.
+    Found 9-bit adder for signal <load_count[8]_GND_5_o_add_35_OUT> created at line 208.
+    Found 32-bit adder for signal <GND_5_o_GND_5_o_add_188_OUT> created at line 309.
+    Found 32-bit adder for signal <GND_5_o_GND_5_o_add_196_OUT> created at line 314.
+    Found 32-bit adder for signal <GND_5_o_GND_5_o_add_209_OUT> created at line 319.
+    Found 32-bit adder for signal <GND_5_o_GND_5_o_add_222_OUT> created at line 324.
+    Found 10-bit adder for signal <m_symbol_index[9]_GND_5_o_add_241_OUT> created at line 336.
+    Found 6-bit subtractor for signal <GND_5_o_GND_5_o_sub_133_OUT<5:0>> created at line 257.
+    Found 5-bit subtractor for signal <GND_5_o_GND_5_o_sub_51_OUT<4:0>> created at line 215.
+    Found 5-bit subtractor for signal <GND_5_o_GND_5_o_sub_67_OUT<4:0>> created at line 221.
+    Found 32-bit shifter logical left for signal <GND_5_o_GND_5_o_shift_left_6_OUT> created at line 196
+    Found 32-bit shifter logical right for signal <GND_5_o_BUS_0002_shift_right_8_OUT> created at line 196
+    Found 32-bit shifter logical right for signal <GND_5_o_GND_5_o_shift_right_16_OUT> created at line 200
+    Found 7x3-bit multiplier for signal <BUS_0042_PWR_4_o_MuLt_119_OUT> created at line 231.
+    Found 32-bit shifter logical left for signal <GND_5_o_GND_5_o_shift_left_126_OUT> created at line 232
+    Found 8-bit shifter logical right for signal <carrier_control[7]_GND_5_o_shift_right_189_OUT> created at line 309
+    Found 8-bit shifter logical right for signal <carrier_control[7]_GND_5_o_shift_right_197_OUT> created at line 314
+    Found 8-bit shifter logical right for signal <carrier_control[7]_GND_5_o_shift_right_210_OUT> created at line 319
+    Found 8-bit shifter logical right for signal <carrier_control[7]_GND_5_o_shift_right_223_OUT> created at line 324
+    Found 6-bit 32-to-1 multiplexer for signal <m_symbol_index[4]_read_port_200_OUT> created at line 0.
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_0> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_0> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_0> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_0> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_0> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_1> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_1> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_1> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_1> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_1> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_2> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_2> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_2> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_2> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_2> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_3> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_3> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_3> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_3> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_3> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_4> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_4> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_4> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_4> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_4> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_5> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_5> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_5> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_5> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_5> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_6> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_6> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_6> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_6> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_6> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_7> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_7> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_7> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_7> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_7> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_8> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_8> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_8> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_8> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_8> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_9> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_9> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_9> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_9> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_9> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_10> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_10> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_10> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_10> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_10> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_11> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_11> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_11> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_11> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_11> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_12> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_12> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_12> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_12> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_12> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_13> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_13> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_13> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_13> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_13> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_14> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_14> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_14> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_14> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_14> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_15> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_15> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_15> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_15> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_15> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_16> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_16> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_16> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_16> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_16> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_17> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_17> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_17> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_17> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_17> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_18> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_18> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_18> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_18> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_18> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_19> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_19> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_19> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_19> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_19> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_20> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_20> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_20> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_20> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_20> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_21> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_21> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_21> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_21> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_21> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_22> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_22> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_22> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_22> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_22> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_23> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_23> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_23> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_23> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_23> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_24> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_24> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_24> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_24> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_24> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_25> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_25> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_25> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_25> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_25> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_26> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_26> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_26> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_26> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_26> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_27> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_27> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_27> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_27> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_27> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_28> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_28> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_28> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_28> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_28> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_29> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_29> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_29> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_29> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_29> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_30> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_30> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_30> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_30> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_30> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_31> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_31> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_31> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_31> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_31> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_32> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_32> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_32> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_32> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_32> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_33> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_33> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_33> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_33> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_33> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_34> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_34> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_34> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_34> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_34> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_35> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_35> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_35> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_35> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_35> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_36> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_36> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_36> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_36> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_36> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_37> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_37> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_37> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_37> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_37> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_38> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_38> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_38> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_38> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_38> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_39> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_39> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_39> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_39> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_39> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_40> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_40> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_40> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_40> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_40> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_41> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_41> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_41> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_41> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_41> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_42> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_42> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_42> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_42> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_42> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_43> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_43> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_43> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_43> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_43> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_44> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_44> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_44> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_44> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_44> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_45> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_45> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_45> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_45> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_45> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_46> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_46> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_46> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_46> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_46> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_47> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_47> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_47> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_47> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_47> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_48> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_48> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_48> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_48> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_48> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_49> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_49> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_49> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_49> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_49> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_50> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_50> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_50> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_50> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_50> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_51> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_51> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_51> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_51> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_51> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_52> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_52> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_52> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_52> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_52> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_53> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_53> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_53> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_53> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_53> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_54> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_54> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_54> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_54> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_54> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_55> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_55> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_55> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_55> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_55> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_56> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_56> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_56> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_56> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_56> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_57> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_57> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_57> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_57> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_57> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_58> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_58> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_58> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_58> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_58> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_59> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_59> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_59> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_59> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_59> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_60> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_60> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_60> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_60> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_60> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_61> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_61> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_61> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_61> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_61> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_62> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_62> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_62> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_62> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_62> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_63> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_63> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_63> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_63> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_63> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_64> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_64> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_64> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_64> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_64> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_65> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_65> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_65> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_65> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_65> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_66> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_66> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_66> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_66> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_66> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_67> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_67> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_67> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_67> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_67> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_68> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_68> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_68> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_68> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_68> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_69> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_69> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_69> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_69> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_69> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_70> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_70> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_70> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_70> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_70> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_71> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_71> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_71> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_71> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_71> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_72> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_72> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_72> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_72> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_72> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_73> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_73> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_73> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_73> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_73> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_74> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_74> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_74> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_74> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_74> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_75> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_75> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_75> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_75> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_75> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_76> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_76> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_76> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_76> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_76> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_77> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_77> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_77> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_77> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_77> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_78> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_78> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_78> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_78> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_78> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_79> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_79> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_79> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_79> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_79> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_80> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_80> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_80> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_80> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_80> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_81> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_81> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_81> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_81> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_81> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_82> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_82> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_82> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_82> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_82> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_83> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_83> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_83> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_83> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_83> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_84> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_84> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_84> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_84> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_84> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_85> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_85> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_85> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_85> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_85> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_86> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_86> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_86> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_86> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_86> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_87> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_87> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_87> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_87> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_87> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_88> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_88> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_88> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_88> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_88> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_89> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_89> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_89> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_89> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_89> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_90> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_90> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_90> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_90> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_90> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_91> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_91> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_91> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_91> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_91> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_92> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_92> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_92> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_92> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_92> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_93> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_93> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_93> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_93> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_93> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_94> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_94> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_94> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_94> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_94> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_95> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_95> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_95> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_95> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_95> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_96> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_96> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_96> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_96> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_97> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_97> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_97> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_97> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_98> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_98> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_98> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_98> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_99> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_99> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_99> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_99> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_100> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_100> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_100> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_100> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_101> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_101> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_101> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_101> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_102> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_102> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_102> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_102> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_103> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_103> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_103> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_103> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_104> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_104> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_104> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_104> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_105> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_105> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_105> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_105> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_106> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_106> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_106> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_106> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_107> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_107> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_107> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_107> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_108> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_108> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_108> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_108> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_109> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_109> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_109> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_109> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_110> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_110> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_110> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_110> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_111> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_111> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_111> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_111> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_112> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_112> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_112> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_112> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_113> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_113> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_113> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_113> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_114> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_114> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_114> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_114> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_115> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_115> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_115> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_115> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_116> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_116> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_116> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_116> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_117> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_117> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_117> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_117> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_118> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_118> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_118> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_118> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_119> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_119> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_119> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_119> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_120> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_120> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_120> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_120> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_121> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_121> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_121> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_121> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_122> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_122> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_122> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_122> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_123> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_123> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_123> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_123> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_124> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_124> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_124> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_124> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_125> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_125> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_125> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_125> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_126> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_126> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_126> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_126> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_127> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_127> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_127> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_127> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_128> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_128> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_128> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_128> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_129> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_129> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_129> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_129> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_130> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_130> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_130> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_130> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_131> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_131> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_131> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_131> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_132> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_132> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_132> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_132> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_133> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_133> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_133> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_133> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_134> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_134> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_134> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_134> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_135> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_135> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_135> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_135> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_136> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_136> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_136> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_136> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_137> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_137> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_137> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_137> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_138> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_138> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_138> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_138> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_139> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_139> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_139> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_139> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_140> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_140> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_140> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_140> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_141> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_141> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_141> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_141> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_142> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_142> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_142> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_142> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_143> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_143> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_143> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_143> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_144> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_144> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_144> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_144> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_145> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_145> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_145> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_145> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_146> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_146> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_146> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_146> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_147> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_147> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_147> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_147> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_148> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_148> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_148> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_148> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_149> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_149> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_149> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_149> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_150> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_150> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_150> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_150> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_151> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_151> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_151> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_151> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_152> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_152> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_152> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_152> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_153> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_153> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_153> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_153> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_154> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_154> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_154> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_154> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_155> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_155> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_155> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_155> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_156> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_156> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_156> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_156> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_157> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_157> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_157> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_157> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_158> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_158> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_158> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_158> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_159> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_159> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_159> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_159> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_160> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_160> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_160> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_160> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_161> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_161> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_161> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_161> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_162> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_162> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_162> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_162> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_163> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_163> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_163> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_163> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_164> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_164> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_164> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_164> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_165> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_165> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_165> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_165> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_166> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_166> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_166> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_166> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_167> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_167> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_167> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_167> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_168> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_168> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_168> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_168> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_169> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_169> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_169> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_169> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_170> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_170> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_170> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_170> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_171> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_171> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_171> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_171> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_172> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_172> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_172> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_172> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_173> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_173> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_173> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_173> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_174> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_174> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_174> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_174> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_175> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_175> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_175> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_175> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_176> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_176> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_176> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_176> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_177> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_177> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_177> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_177> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_178> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_178> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_178> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_178> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_179> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_179> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_179> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_179> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_180> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_180> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_180> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_180> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_181> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_181> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_181> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_181> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_182> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_182> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_182> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_182> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_183> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_183> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_183> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_183> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_184> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_184> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_184> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_184> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_185> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_185> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_185> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_185> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_186> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_186> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_186> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_186> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_187> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_187> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_187> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_187> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_188> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_188> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_188> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_188> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_189> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_189> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_189> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_189> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_190> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_190> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_190> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_190> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_191> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_191> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_191> created at line 189
+    Found 1-bit tristate buffer for signal <qam_symbol_trst_191> created at line 189
+    Found 32-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_5_o> created at line 194
+    Found 7-bit comparator lessequal for signal <n0011> created at line 199
+    Found 9-bit comparator lessequal for signal <n0088> created at line 260
+    Found 10-bit comparator greater for signal <m_symbol_index[9]_GND_5_o_LessThan_186_o> created at line 308
+    Found 10-bit comparator greater for signal <m_symbol_index[9]_GND_5_o_LessThan_194_o> created at line 313
+    Found 10-bit comparator greater for signal <m_symbol_index[9]_GND_5_o_LessThan_206_o> created at line 318
+    Found 10-bit comparator lessequal for signal <m_symbol_index[9]_GND_5_o_LessThan_219_o> created at line 323
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred  22 Adder/Subtractor(s).
+	inferred 275 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred 135 Multiplexer(s).
+	inferred   8 Combinational logic shifter(s).
+	inferred 864 Tristate(s).
+Unit <qam_mapper> synthesized.
+
+Synthesizing Unit <div_7u_3u>.
+    Related source file is "".
+    Found 10-bit adder for signal <GND_6_o_b[2]_add_1_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_6_o_b[2]_add_3_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_6_o_b[2]_add_5_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_b[2]_add_7_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_6_o_add_9_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_6_o_add_11_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_6_o_add_13_OUT[6:0]> created at line 0.
+    Found 10-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  31 Multiplexer(s).
+Unit <div_7u_3u> synthesized.
+
+Synthesizing Unit <div_32u_2u>.
+    Related source file is "".
+    Found 34-bit adder for signal <n2387> created at line 0.
+    Found 34-bit adder for signal <GND_11_o_b[1]_add_1_OUT> created at line 0.
+    Found 33-bit adder for signal <n2391> created at line 0.
+    Found 33-bit adder for signal <GND_11_o_b[1]_add_3_OUT> created at line 0.
+    Found 32-bit adder for signal <n2395> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[1]_add_5_OUT> created at line 0.
+    Found 32-bit adder for signal <n2399> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_7_OUT> created at line 0.
+    Found 32-bit adder for signal <n2403> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_9_OUT> created at line 0.
+    Found 32-bit adder for signal <n2407> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_11_OUT> created at line 0.
+    Found 32-bit adder for signal <n2411> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_13_OUT> created at line 0.
+    Found 32-bit adder for signal <n2415> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <n2419> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <n2423> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <n2427> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <n2431> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <n2435> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <n2439> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <n2443> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <n2447> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <n2451> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <n2455> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <n2459> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <n2463> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <n2467> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <n2471> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <n2475> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <n2479> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <n2483> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <n2487> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <n2491> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <n2495> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <n2499> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <n2503> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n2507> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n2511> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_11_o_add_63_OUT[31:0]> created at line 0.
+    Found 34-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  64 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_2u> synthesized.
+
+Synthesizing Unit <ifft_manager>.
+    Related source file is "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v".
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" line 52: Output port <event_frame_started> of the instance <fft_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" line 52: Output port <event_tlast_unexpected> of the instance <fft_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" line 52: Output port <event_tlast_missing> of the instance <fft_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" line 52: Output port <event_status_channel_halt> of the instance <fft_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" line 52: Output port <event_data_in_channel_halt> of the instance <fft_core> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ifft_manager.v" line 52: Output port <event_data_out_channel_halt> of the instance <fft_core> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <s_axis_config_tvalid>.
+    Found 16-bit adder for signal <m_axis_real_unsigned> created at line 48.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+Unit <ifft_manager> synthesized.
+
+Synthesizing Unit <spi_16>.
+    Related source file is "D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\spi_16.v".
+    Found 1-bit register for signal <cs_n>.
+    Found 6-bit register for signal <bit_counter>.
+    Found 16-bit register for signal <spi_data>.
+    Found 8-bit register for signal <state>.
+    Found 1-bit register for signal <mosi>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | sclk (rising_edge)                             |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000000                                       |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <bit_counter[5]_GND_17_o_add_2_OUT> created at line 68.
+    Found 6-bit comparator greater for signal <bit_counter[5]_GND_17_o_LessThan_2_o> created at line 65
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <spi_16> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 64x16-bit single-port Read Only RAM                   : 2
+# Multipliers                                          : 1
+ 7x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 288
+ 10-bit adder                                          : 3
+ 11-bit subtractor                                     : 4
+ 16-bit adder                                          : 1
+ 32-bit adder                                          : 245
+ 32-bit subtractor                                     : 3
+ 33-bit adder                                          : 8
+ 34-bit adder                                          : 8
+ 5-bit subtractor                                      : 2
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 1
+ 7-bit adder                                           : 6
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 2
+# Registers                                            : 54
+ 1-bit register                                        : 10
+ 10-bit register                                       : 1
+ 16-bit register                                       : 3
+ 32-bit register                                       : 3
+ 6-bit register                                        : 35
+ 8-bit register                                        : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 148
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 124
+ 33-bit comparator lessequal                           : 4
+ 34-bit comparator lessequal                           : 4
+ 6-bit comparator greater                              : 1
+ 7-bit comparator lessequal                            : 6
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 3894
+ 1-bit 2-to-1 multiplexer                              : 3753
+ 10-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 27
+ 6-bit 2-to-1 multiplexer                              : 102
+ 6-bit 32-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 5
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 8
+ 32-bit shifter logical left                           : 2
+ 32-bit shifter logical right                          : 2
+ 8-bit shifter logical right                           : 4
+# Tristates                                            : 864
+ 1-bit tristate buffer                                 : 864
+# FSMs                                                 : 1
+# Xors                                                 : 21
+ 1-bit xor4                                            : 2
+ 32-bit xor2                                           : 2
+ 6-bit xor2                                            : 16
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/xfft_v8_0.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <xfft_v8_0> for timing and area information for instance <fft_core>.
+INFO:Xst:2261 - The FF/Latch <carry_over_8> in Unit <qam_mod> is equivalent to the following 7 FFs/Latches, which will be removed : <carry_over_9> <carry_over_10> <carry_over_11> <carry_over_12> <carry_over_13> <carry_over_14> <carry_over_15> 
+WARNING:Xst:1710 - FF/Latch <carry_over_8> (without init value) has a constant value of 0 in block <qam_mod>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <carry_over<15:8>> (without init value) have a constant value of 0 in block <qam_mapper>.
+
+Synthesizing (advanced) Unit <master_clk_divisor>.
+The following registers are absorbed into counter <acounter>: 1 register on signal <acounter>.
+Unit <master_clk_divisor> synthesized (advanced).
+
+Synthesizing (advanced) Unit <qam_mapper>.
+The following registers are absorbed into accumulator <load_count>: 1 register on signal <load_count>.
+The following registers are absorbed into counter <delay_c>: 1 register on signal <delay_c>.
+The following registers are absorbed into counter <m_symbol_index>: 1 register on signal <m_symbol_index>.
+	Multiplier <Mmult_BUS_0042_PWR_4_o_MuLt_119_OUT> in block <qam_mapper> and adder/subtractor <Msub_n0253[10:0]> in block <qam_mapper> are combined into a MAC<Maddsub_BUS_0042_PWR_4_o_MuLt_119_OUT>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_qam_real> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m_symbol_index[4]_read_port_200_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_qam_imag> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <m_symbol_index[4]_read_port_200_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <qam_mapper> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_16>.
+The following registers are absorbed into counter <bit_counter>: 1 register on signal <bit_counter>.
+Unit <spi_16> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 64x16-bit single-port distributed Read Only RAM       : 2
+# MACs                                                 : 1
+ 7x3-to-11-bit MAC                                     : 1
+# Adders/Subtractors                                   : 154
+ 11-bit subtractor                                     : 3
+ 16-bit adder                                          : 1
+ 32-bit adder                                          : 4
+ 32-bit adder carry in                                 : 128
+ 32-bit subtractor                                     : 2
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 2
+ 7-bit adder                                           : 9
+ 7-bit subtractor                                      : 1
+ 8-bit subtractor                                      : 3
+# Counters                                             : 4
+ 10-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 6-bit down counter                                    : 1
+ 6-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 9-bit up loadable accumulator                         : 1
+# Registers                                            : 320
+ Flip-Flops                                            : 320
+# Comparators                                          : 148
+ 10-bit comparator greater                             : 3
+ 10-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 124
+ 33-bit comparator lessequal                           : 4
+ 34-bit comparator lessequal                           : 4
+ 6-bit comparator greater                              : 1
+ 7-bit comparator lessequal                            : 6
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 3974
+ 1-bit 2-to-1 multiplexer                              : 3849
+ 1-bit 32-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 26
+ 6-bit 2-to-1 multiplexer                              : 84
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 5
+# Logic shifters                                       : 8
+ 32-bit shifter logical left                           : 2
+ 32-bit shifter logical right                          : 2
+ 8-bit shifter logical right                           : 4
+# FSMs                                                 : 1
+# Xors                                                 : 21
+ 1-bit xor4                                            : 2
+ 32-bit xor2                                           : 2
+ 6-bit xor2                                            : 16
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <spi_dac/FSM_0> on signal <state[1:2]> with sequential encoding.
+----------------------
+ State    | Encoding
+----------------------
+ 00000000 | 00
+ 00000001 | 01
+ 00000010 | 10
+----------------------
+WARNING:Xst:1710 - FF/Latch <co_count_0> (without init value) has a constant value of 0 in block <qam_mapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <carry_over_6> of sequential type is unconnected in block <qam_mapper>.
+WARNING:Xst:2677 - Node <carry_over_7> of sequential type is unconnected in block <qam_mapper>.
+WARNING:Xst:2040 - Unit qam_mapper: 192 multi-source signals are replaced by logic (pull-up yes): qam_symbol_trst_0, qam_symbol_trst_1, qam_symbol_trst_10, qam_symbol_trst_100, qam_symbol_trst_101, qam_symbol_trst_102, qam_symbol_trst_103, qam_symbol_trst_104, qam_symbol_trst_105, qam_symbol_trst_106, qam_symbol_trst_107, qam_symbol_trst_108, qam_symbol_trst_109, qam_symbol_trst_11, qam_symbol_trst_110, qam_symbol_trst_111, qam_symbol_trst_112, qam_symbol_trst_113, qam_symbol_trst_114, qam_symbol_trst_115, qam_symbol_trst_116, qam_symbol_trst_117, qam_symbol_trst_118, qam_symbol_trst_119, qam_symbol_trst_12, qam_symbol_trst_120, qam_symbol_trst_121, qam_symbol_trst_122, qam_symbol_trst_123, qam_symbol_trst_124, qam_symbol_trst_125, qam_symbol_trst_126, qam_symbol_trst_127, qam_symbol_trst_128, qam_symbol_trst_129, qam_symbol_trst_13, qam_symbol_trst_130, qam_symbol_trst_131, qam_symbol_trst_132, qam_symbol_trst_133, qam_symbol_trst_134, qam_symbol_trst_135, qam_symbol_trst_136, qam_symbol_trst_137, qam_symbol_trst_138, qam_symbol_trst_139, qam_symbol_trst_14, qam_symbol_trst_140, qam_symbol_trst_141, qam_symbol_trst_142, qam_symbol_trst_143, qam_symbol_trst_144, qam_symbol_trst_145, qam_symbol_trst_146, qam_symbol_trst_147, qam_symbol_trst_148, qam_symbol_trst_149, qam_symbol_trst_15, qam_symbol_trst_150, qam_symbol_trst_151, qam_symbol_trst_152, qam_symbol_trst_153, qam_symbol_trst_154, qam_symbol_trst_155, qam_symbol_trst_156, qam_symbol_trst_157, qam_symbol_trst_158, qam_symbol_trst_159, qam_symbol_trst_16, qam_symbol_trst_160, qam_symbol_trst_161, qam_symbol_trst_162, qam_symbol_trst_163, qam_symbol_trst_164, qam_symbol_trst_165, qam_symbol_trst_166, qam_symbol_trst_167, qam_symbol_trst_168, qam_symbol_trst_169, qam_symbol_trst_17, qam_symbol_trst_170, qam_symbol_trst_171, qam_symbol_trst_172, qam_symbol_trst_173, qam_symbol_trst_174, qam_symbol_trst_175, qam_symbol_trst_176, qam_symbol_trst_177, qam_symbol_trst_178, qam_symbol_trst_179, qam_symbol_trst_18, qam_symbol_trst_180, qam_symbol_trst_181, qam_symbol_trst_182, qam_symbol_trst_183, qam_symbol_trst_184, qam_symbol_trst_185, qam_symbol_trst_186, qam_symbol_trst_187, qam_symbol_trst_188, qam_symbol_trst_189, qam_symbol_trst_19, qam_symbol_trst_190, qam_symbol_trst_191, qam_symbol_trst_2, qam_symbol_trst_20, qam_symbol_trst_21, qam_symbol_trst_22, qam_symbol_trst_23, qam_symbol_trst_24, qam_symbol_trst_25, qam_symbol_trst_26, qam_symbol_trst_27, qam_symbol_trst_28, qam_symbol_trst_29, qam_symbol_trst_3, qam_symbol_trst_30, qam_symbol_trst_31, qam_symbol_trst_32, qam_symbol_trst_33, qam_symbol_trst_34, qam_symbol_trst_35, qam_symbol_trst_36, qam_symbol_trst_37, qam_symbol_trst_38, qam_symbol_trst_39, qam_symbol_trst_4, qam_symbol_trst_40, qam_symbol_trst_41, qam_symbol_trst_42, qam_symbol_trst_43, qam_symbol_trst_44, qam_symbol_trst_45, qam_symbol_trst_46, qam_symbol_trst_47, qam_symbol_trst_48, qam_symbol_trst_49, qam_symbol_trst_5, qam_symbol_trst_50, qam_symbol_trst_51, qam_symbol_trst_52, qam_symbol_trst_53, qam_symbol_trst_54, qam_symbol_trst_55, qam_symbol_trst_56, qam_symbol_trst_57, qam_symbol_trst_58, qam_symbol_trst_59, qam_symbol_trst_6, qam_symbol_trst_60, qam_symbol_trst_61, qam_symbol_trst_62, qam_symbol_trst_63, qam_symbol_trst_64, qam_symbol_trst_65, qam_symbol_trst_66, qam_symbol_trst_67, qam_symbol_trst_68, qam_symbol_trst_69, qam_symbol_trst_7, qam_symbol_trst_70, qam_symbol_trst_71, qam_symbol_trst_72, qam_symbol_trst_73, qam_symbol_trst_74, qam_symbol_trst_75, qam_symbol_trst_76, qam_symbol_trst_77, qam_symbol_trst_78, qam_symbol_trst_79, qam_symbol_trst_8, qam_symbol_trst_80, qam_symbol_trst_81, qam_symbol_trst_82, qam_symbol_trst_83, qam_symbol_trst_84, qam_symbol_trst_85, qam_symbol_trst_86, qam_symbol_trst_87, qam_symbol_trst_88, qam_symbol_trst_89, qam_symbol_trst_9, qam_symbol_trst_90, qam_symbol_trst_91, qam_symbol_trst_92, qam_symbol_trst_93, qam_symbol_trst_94, qam_symbol_trst_95, qam_symbol_trst_96, qam_symbol_trst_97, qam_symbol_trst_98, qam_symbol_trst_99.
+
+Optimizing unit <ofdm_top_module> ...
+
+Optimizing unit <source_gen1> ...
+
+Optimizing unit <qam_mapper> ...
+WARNING:Xst:1710 - FF/Latch <load_count_8> (without init value) has a constant value of 0 in block <qam_mapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <load_count_8> (without init value) has a constant value of 0 in block <qam_mapper>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <spi_16> ...
+WARNING:Xst:1710 - FF/Latch <qam_mod/load_count_7> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/load_count_6> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/load_count_5> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/load_count_4> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/m_symbol_index_9> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/m_symbol_index_8> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/m_symbol_index_7> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/m_symbol_index_6> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/m_symbol_index_5> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/co_count_5> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/co_count_4> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/co_count_3> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/carry_over_5> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <qam_mod/carry_over_4> (without init value) has a constant value of 0 in block <ofdm_top_module>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <qam_mod/delay_c_5> in Unit <ofdm_top_module> is equivalent to the following 4 FFs/Latches, which will be removed : <qam_mod/delay_c_4> <qam_mod/delay_c_3> <qam_mod/delay_c_2> <qam_mod/delay_c_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ofdm_top_module, actual ratio is 65.
+FlipFlop qam_mod/m_symbol_index_0 has been replicated 1 time(s)
+FlipFlop qam_mod/m_symbol_index_1 has been replicated 1 time(s)
+FlipFlop qam_mod/m_symbol_index_2 has been replicated 1 time(s)
+FlipFlop qam_mod/m_symbol_index_3 has been replicated 1 time(s)
+FlipFlop qam_mod/m_symbol_index_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <ofdm_top_module> :
+	Found 4-bit shift register for signal <data_generator/lfsr32_28>.
+Unit <ofdm_top_module> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 364
+ Flip-Flops                                            : 364
+# Shift Registers                                      : 1
+ 4-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ofdm_top_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 9509
+#      GND                         : 1
+#      INV                         : 16
+#      LUT1                        : 75
+#      LUT2                        : 111
+#      LUT3                        : 716
+#      LUT4                        : 216
+#      LUT5                        : 2804
+#      LUT6                        : 1634
+#      MUXCY                       : 2046
+#      MUXF7                       : 11
+#      VCC                         : 1
+#      XORCY                       : 1878
+# FlipFlops/Latches                : 368
+#      FDC                         : 38
+#      FDCE                        : 103
+#      FDE                         : 192
+#      FDPE                        : 35
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 9
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             368  out of  18224     2%  
+ Number of Slice LUTs:                 5573  out of   9112    61%  
+    Number used as Logic:              5572  out of   9112    61%  
+    Number used as Memory:                1  out of   2176     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4217
+   Number with an unused Flip Flop:    3849  out of   4217    91%  
+   Number with an unused LUT:         -1356  out of   4217   -32%  
+   Number of fully used LUT-FF pairs:  1724  out of   4217    40%  
+   Number of unique control sets:        45
+
+IO Utilization: 
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 34    |
+clk_gen/aclk                       | BUFG                   | 3461  |
+clk_gen/spi_sclk                   | BUFG                   | 26    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 74.285ns (Maximum Frequency: 13.462MHz)
+   Minimum input arrival time before clock: 9.456ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: 4.622ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.493ns (frequency: 222.544MHz)
+  Total number of paths / destination ports: 1586 / 35
+-------------------------------------------------------------------------
+Delay:               4.493ns (Levels of Logic = 3)
+  Source:            clk_gen/acounter_1 (FF)
+  Destination:       clk_gen/acounter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clk_gen/acounter_1 to clk_gen/acounter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.981  clk_gen/acounter_1 (clk_gen/acounter_1)
+     LUT6:I0->O            1   0.203   0.944  clk_gen/acounter[31]_GND_2_o_equal_1_o<31>1 (clk_gen/acounter[31]_GND_2_o_equal_1_o<31>)
+     LUT6:I0->O           33   0.203   1.410  clk_gen/acounter[31]_GND_2_o_equal_1_o<31>7 (clk_gen/acounter[31]_GND_2_o_equal_1_o)
+     LUT2:I0->O            1   0.203   0.000  clk_gen/Mcount_acounter_eqn_01 (clk_gen/Mcount_acounter_eqn_0)
+     FDC:D                     0.102          clk_gen/acounter_0
+    ----------------------------------------
+    Total                      4.493ns (1.158ns logic, 3.335ns route)
+                                       (25.8% logic, 74.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_gen/aclk'
+  Clock period: 74.285ns (frequency: 13.462MHz)
+  Total number of paths / destination ports: 2072974846948684300000000000000000000 / 7613
+-------------------------------------------------------------------------
+Delay:               74.285ns (Levels of Logic = 132)
+  Source:            qam_mod/m_symbol_index_0_1 (FF)
+  Destination:       qam_mod/m_data_out_30 (FF)
+  Source Clock:      clk_gen/aclk rising
+  Destination Clock: clk_gen/aclk rising
+
+  Data Path: qam_mod/m_symbol_index_0_1 to qam_mod/m_data_out_30
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.447   1.059  qam_mod/m_symbol_index_0_1 (qam_mod/m_symbol_index_0_1)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_11_OUT_Madd_cy<27>113 (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_11_OUT_Madd_cy<27>112)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<20> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<21> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<22> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<23> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<24> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<25> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<26> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<27> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<28> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<29> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<30> (qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_cy<30>)
+     XORCY:CI->O           2   0.180   0.617  qam_mod/GND_5_o_PWR_4_o_div_195/Madd_a[31]_GND_11_o_add_25_OUT_Madd_xor<31> (qam_mod/GND_5_o_PWR_4_o_div_195/a[31]_GND_11_o_add_25_OUT<31>)
+     LUT6:I5->O           22   0.205   1.362  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1293_o1241 (qam_mod/GND_5_o_PWR_4_o_div_195/a[31]_a[31]_MUX_1262_o)
+     LUT6:I3->O           17   0.205   1.028  qam_mod/n0381<19>24 (qam_mod/n0381<19>)
+     LUT4:I3->O            5   0.205   1.059  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1325_o1181 (qam_mod/GND_5_o_PWR_4_o_div_195/a[26]_a[31]_MUX_1299_o)
+     LUT6:I1->O            8   0.203   0.803  qam_mod/n0381<18>21_1 (qam_mod/n0381<18>211)
+     LUT6:I5->O           15   0.205   0.982  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1357_o1211 (qam_mod/GND_5_o_PWR_4_o_div_195/a[29]_a[31]_MUX_1328_o)
+     LUT5:I4->O           22   0.205   1.238  qam_mod/n0381<17>21 (qam_mod/n0381<17>2)
+     LUT6:I4->O           38   0.203   1.377  qam_mod/n0381<17>23 (qam_mod/n0381<17>)
+     LUT3:I2->O           14   0.205   0.958  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1389_o1211 (qam_mod/GND_5_o_PWR_4_o_div_195/a[29]_a[31]_MUX_1360_o)
+     LUT6:I5->O           21   0.205   1.114  qam_mod/n0381<16>23 (qam_mod/n0381<16>)
+     LUT6:I5->O           24   0.205   1.277  qam_mod/n0381<15>23 (qam_mod/n0381<15>22)
+     LUT4:I2->O           11   0.203   0.883  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1453_o1101_SW2 (N1466)
+     LUT6:I5->O            3   0.205   0.755  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1453_o1201 (qam_mod/GND_5_o_PWR_4_o_div_195/a[28]_a[31]_MUX_1425_o)
+     LUT6:I4->O           42   0.203   1.538  qam_mod/n0381<14>23 (qam_mod/n0381<14>22)
+     LUT5:I3->O            3   0.203   0.995  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1485_o1241 (qam_mod/GND_5_o_PWR_4_o_div_195/a[31]_a[31]_MUX_1454_o)
+     LUT6:I1->O           29   0.203   1.250  qam_mod/n0381<13>33 (qam_mod/n0381<13>32)
+     LUT5:I4->O            2   0.205   0.617  qam_mod/n0381<13>34_1 (qam_mod/n0381<13>341)
+     LUT6:I5->O           12   0.205   1.013  qam_mod/n0381<12>32 (qam_mod/n0381<12>31)
+     LUT4:I2->O           32   0.203   1.292  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1549_o171_SW2 (N879)
+     LUT6:I5->O            6   0.205   1.089  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1549_o171 (qam_mod/GND_5_o_PWR_4_o_div_195/a[16]_a[31]_MUX_1533_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_lut<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_cy<3>)
+     MUXCY:CI->O          84   0.213   1.772  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<11>_cy<4> (qam_mod/n0381<11>)
+     LUT3:I2->O            4   0.205   1.028  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1581_o131 (qam_mod/GND_5_o_PWR_4_o_div_195/a[12]_a[31]_MUX_1569_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<3>)
+     MUXCY:CI->O          89   0.213   1.805  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<10>_cy<4> (qam_mod/n0381<10>)
+     LUT5:I4->O            3   0.205   0.995  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1613_o122 (qam_mod/GND_5_o_PWR_4_o_div_195/a[11]_a[31]_MUX_1602_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<3>)
+     MUXCY:CI->O          71   0.213   1.687  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<9>_cy<4> (qam_mod/n0381<9>)
+     LUT5:I4->O            5   0.205   1.059  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1645_o111 (qam_mod/GND_5_o_PWR_4_o_div_195/a[10]_a[31]_MUX_1635_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<3>)
+     MUXCY:CI->O          98   0.213   1.865  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<8>_cy<4> (qam_mod/n0381<8>)
+     LUT5:I4->O            3   0.205   0.995  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1677_o1311 (qam_mod/GND_5_o_PWR_4_o_div_195/a[9]_a[31]_MUX_1668_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<3>)
+     MUXCY:CI->O          78   0.213   1.733  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<7>_cy<4> (qam_mod/n0381<7>)
+     LUT5:I4->O            5   0.205   1.059  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1709_o1301 (qam_mod/GND_5_o_PWR_4_o_div_195/a[8]_a[31]_MUX_1701_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<4> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<4>)
+     MUXCY:CI->O         105   0.213   1.891  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<6>_cy<5> (qam_mod/n0381<6>)
+     LUT5:I4->O            3   0.205   0.995  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1741_o1291 (qam_mod/GND_5_o_PWR_4_o_div_195/a[7]_a[31]_MUX_1734_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<4> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<4>)
+     MUXCY:CI->O          83   0.213   1.766  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<5>_cy<5> (qam_mod/n0381<5>)
+     LUT5:I4->O            5   0.205   1.059  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1773_o1281 (qam_mod/GND_5_o_PWR_4_o_div_195/a[6]_a[31]_MUX_1767_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<4> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<4>)
+     MUXCY:CI->O         113   0.213   1.912  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<4>_cy<5> (qam_mod/n0381<4>)
+     LUT5:I4->O            4   0.205   1.028  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_a[0]_a[31]_MUX_1805_o1271 (qam_mod/GND_5_o_PWR_4_o_div_195/a[5]_a[31]_MUX_1800_o)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<4> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<4>)
+     MUXCY:CI->O         116   0.213   1.920  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<3>_cy<5> (qam_mod/n0381<3>)
+     LUT5:I4->O            3   0.205   0.995  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_n2505271 (qam_mod/GND_5_o_PWR_4_o_div_195/n2505<4>)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<4> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<4>)
+     MUXCY:CI->O          92   0.213   1.825  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<2>_cy<5> (qam_mod/n0381<2>)
+     LUT3:I2->O            2   0.205   0.961  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_n2509261 (qam_mod/GND_5_o_PWR_4_o_div_195/n2509<3>)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<4> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<5> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<5>)
+     MUXCY:CI->O          32   0.213   1.292  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<1>_cy<6> (qam_mod/n0381<1>)
+     LUT5:I4->O            2   0.205   0.961  qam_mod/GND_5_o_PWR_4_o_div_195/Mmux_n2380231 (qam_mod/GND_5_o_PWR_4_o_div_195/n2380<2>)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_lut<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<0> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<1> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<2> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<3> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<4> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<5> (qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<5>)
+     MUXCY:CI->O           1   0.213   0.579  qam_mod/GND_5_o_PWR_4_o_div_195/Mcompar_o<0>_cy<6> (qam_mod/n0381<0>)
+     INV:I->O              1   0.206   0.000  qam_mod/Madd_GND_5_o_GND_5_o_add_196_OUT_lut<0>_INV_0 (qam_mod/Madd_GND_5_o_GND_5_o_add_196_OUT_lut<0>)
+     XORCY:LI->O           3   0.136   0.651  qam_mod/Madd_GND_5_o_GND_5_o_add_196_OUT_xor<0> (qam_mod/GND_5_o_GND_5_o_add_196_OUT<0>1)
+     LUT4:I3->O            1   0.205   0.580  qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT1109_SW0_SW1 (N2806)
+     LUT6:I5->O            1   0.205   0.000  qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT1109_SW0_G (N3158)
+     MUXF7:I1->O           1   0.140   0.580  qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT1109_SW0 (N376)
+     LUT6:I5->O           13   0.205   0.933  qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT1109 (qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT1109)
+     LUT6:I5->O            1   0.205   0.000  qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT1129_F (N2958)
+     MUXF7:I0->O          20   0.131   1.093  qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT1129 (qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT112)
+     LUT5:I4->O            1   0.205   0.000  qam_mod/Mmux_m_data_out[31]_GND_5_o_mux_238_OUT42 (qam_mod/m_data_out[31]_GND_5_o_mux_238_OUT<10>)
+     FDCE:D                    0.102          qam_mod/m_data_out_10
+    ----------------------------------------
+    Total                     74.285ns (16.960ns logic, 57.325ns route)
+                                       (22.8% logic, 77.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_gen/spi_sclk'
+  Clock period: 3.556ns (frequency: 281.201MHz)
+  Total number of paths / destination ports: 163 / 50
+-------------------------------------------------------------------------
+Delay:               3.556ns (Levels of Logic = 1)
+  Source:            spi_dac/state_FSM_FFd1 (FF)
+  Destination:       spi_dac/bit_counter_5 (FF)
+  Source Clock:      clk_gen/spi_sclk rising
+  Destination Clock: clk_gen/spi_sclk rising
+
+  Data Path: spi_dac/state_FSM_FFd1 to spi_dac/bit_counter_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             27   0.447   1.449  spi_dac/state_FSM_FFd1 (spi_dac/state_FSM_FFd1)
+     LUT4:I1->O           22   0.205   1.133  spi_dac/_n0107_inv21 (spi_dac/_n0107_inv)
+     FDCE:CE                   0.322          spi_dac/spi_data_0
+    ----------------------------------------
+    Total                      3.556ns (0.974ns logic, 2.582ns route)
+                                       (27.4% logic, 72.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              3.700ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       clk_gen/aclk (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to clk_gen/aclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           195   1.222   2.048  reset_IBUF (ifft_inst/aresetn_inv)
+     FDC:CLR                   0.430          clk_gen/spi_sclk
+    ----------------------------------------
+    Total                      3.700ns (1.652ns logic, 2.048ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_gen/aclk'
+  Total number of paths / destination ports: 2276 / 360
+-------------------------------------------------------------------------
+Offset:              9.456ns (Levels of Logic = 6)
+  Source:            reset (PAD)
+  Destination:       qam_mod/qam_symbol_ff_60_0 (FF)
+  Destination Clock: clk_gen/aclk rising
+
+  Data Path: reset to qam_mod/qam_symbol_ff_60_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           195   1.222   2.393  reset_IBUF (ifft_inst/aresetn_inv)
+     LUT6:I1->O           65   0.203   1.991  qam_mod/Mmux_BUS_000711 (qam_mod/BUS_0007)
+     LUT5:I0->O            2   0.203   0.864  qam_mod/qam_symbol_trst_60LogicTrst2_SW1 (N3011)
+     LUT5:I1->O            5   0.203   0.943  qam_mod/qam_symbol_trst_60LogicTrst2 (qam_mod/qam_symbol_trst_60LogicTrst2)
+     LUT4:I1->O            1   0.205   0.924  qam_mod/qam_symbol_trst_65LogicTrst_SW1 (N3107)
+     LUT5:I0->O            1   0.203   0.000  qam_mod/qam_symbol_trst_65LogicTrst (qam_mod/qam_symbol_trst_65)
+     FDE:D                     0.102          qam_mod/qam_symbol_ff_65_5
+    ----------------------------------------
+    Total                      9.456ns (2.341ns logic, 7.115ns route)
+                                       (24.8% logic, 75.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_gen/spi_sclk'
+  Total number of paths / destination ports: 26 / 26
+-------------------------------------------------------------------------
+Offset:              3.700ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       spi_dac/state_FSM_FFd1 (FF)
+  Destination Clock: clk_gen/spi_sclk rising
+
+  Data Path: reset to spi_dac/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           195   1.222   2.048  reset_IBUF (ifft_inst/aresetn_inv)
+     FDCE:CLR                  0.430          spi_dac/spi_data_0
+    ----------------------------------------
+    Total                      3.700ns (1.652ns logic, 2.048ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            clk_gen/spi_sclk (FF)
+  Destination:       sclk (PAD)
+  Source Clock:      clk rising
+
+  Data Path: clk_gen/spi_sclk to sclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  clk_gen/spi_sclk (clk_gen/spi_sclk)
+     OBUF:I->O                 2.571          sclk_OBUF (sclk)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_gen/spi_sclk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            spi_dac/cs_n (FF)
+  Destination:       cs_n (PAD)
+  Source Clock:      clk_gen/spi_sclk rising
+
+  Data Path: spi_dac/cs_n to cs_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.447   0.579  spi_dac/cs_n (spi_dac/cs_n)
+     OBUF:I->O                 2.571          cs_n_OBUF (cs_n)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.622ns (Levels of Logic = 2)
+  Source:            sw0 (PAD)
+  Destination:       led0 (PAD)
+
+  Data Path: sw0 to led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   0.829  sw0_IBUF (led0_OBUF)
+     OBUF:I->O                 2.571          led0_OBUF (led0)
+    ----------------------------------------
+    Total                      4.622ns (3.793ns logic, 0.829ns route)
+                                       (82.1% logic, 17.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.493|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_gen/aclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_gen/aclk   |   74.285|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_gen/spi_sclk
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk_gen/aclk    |    1.953|         |         |         |
+clk_gen/spi_sclk|    3.556|         |         |         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 77.00 secs
+Total CPU time to Xst completion: 77.00 secs
+ 
+--> 
+
+Total memory usage is 4611680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

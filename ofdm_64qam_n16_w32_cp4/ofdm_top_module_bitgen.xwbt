@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.ncd
+OUTFILE=D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4\ofdm_top_module.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=D:\Desktop\tcc\ofdm_64qam_n16_w32_cp4
+LICENSE=WebPack
+USER_INFO=213053354_0_0_521
